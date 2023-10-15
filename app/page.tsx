@@ -52,17 +52,13 @@ const Home = () => {
   </div>
 
   {data ? (
-  <div key="welcome-message" className="text-slate-200 font-semibold flex items-center">
-    Welcome, {data.user?.name}
-    {data.user?.image && (
-
-
-<Image src={data.user.image} alt="User Profile" />
-
-      
-    )}
-  </div>
-) : null}
+        <div key="welcome-message" className="text-slate-200 font-semibold flex items-center">
+          Welcome, {data.user?.name}
+          {data.user?.image && (
+            <Image src={data.user.image} alt="User Profile" width={100} height={100} />
+          )}
+        </div>
+      ) : null}
 
   <div className="w-3/4 flex justify-between p-4 my-5">
     <div>
