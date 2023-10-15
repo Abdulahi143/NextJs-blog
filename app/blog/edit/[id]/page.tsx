@@ -48,7 +48,7 @@ const getPostById = async (id:string) =>{
     return data.post;
 }
 
-const editPost = ({params} : { params: {id: string }}) => {
+const EditPost = ({params} : { params: {id: string }}) => {
     const router = useRouter();
     const titleRef = useRef<HTMLInputElement | null>(null);
     const descriptionRef = useRef<HTMLTextAreaElement | null>(null);
@@ -130,4 +130,4 @@ const editPost = ({params} : { params: {id: string }}) => {
 
 }
 
-export default editPost;
+export default EditPost;

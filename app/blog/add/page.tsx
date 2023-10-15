@@ -17,12 +17,12 @@ const addBlog = async ({ title, description }: { title: string; description: str
   const res = await fetch(`${baseURL}/api/blog`, {
     method: "POST",
     headers: {
-      "Content-Type": "application/json", // Use headers to set Content-Type
+      "Content-Type": "application/json", 
     },
     body: JSON.stringify({ title, description }),
   });
 
-  return await res.json(); // Await the response before calling .json()
+  return await res.json(); 
 };
 
 
