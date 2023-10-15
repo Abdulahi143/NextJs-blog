@@ -1,3 +1,5 @@
+// prisma/client.ts (or your module)
+
 import { PrismaClient } from '@prisma/client';
 
 let prisma: PrismaClient;
