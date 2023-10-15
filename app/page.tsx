@@ -4,6 +4,7 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import {useSession} from 'next-auth/react';
 import { getBaseUrl } from './util/baseURL';
+import Image from 'next/image';
 
 
 export const dynamic = 'force-dynamic';
@@ -54,11 +55,11 @@ const Home = () => {
   <div key="welcome-message" className="text-slate-200 font-semibold flex items-center">
     Welcome, {data.user?.name}
     {data.user?.image && (
-      <img
-        src={data.user.image}
-        alt="User Profile"
-        className="w-12 h-12 rounded-full ml-2"
-      />
+
+
+<Image src={data.user.image} alt="User Profile" />
+
+      
     )}
   </div>
 ) : null}
