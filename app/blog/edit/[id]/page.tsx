@@ -4,6 +4,7 @@ import { Fragment, useRef } from "react"
 import toast, { Toaster } from "react-hot-toast"
 import { useEffect } from 'react';
 import { useRouter } from "next/navigation";
+import { getBaseUrl } from "@/app/util/baseURL";
 
 
 
@@ -18,7 +19,10 @@ type UpdateBlogParams = {
 
 
 const updatePost = async (data: UpdateBlogParams) => {
-    const res = fetch(`http://localhost:3000/api/blog/${data.id}`, {
+
+  const baseURL = getBaseUrl();
+
+    const res = fetch(`${baseURL}/api/blog/${data.id}`, {
         method: "PUT",
         body: JSON.stringify({ title: data.title, description: data.description }),
         headers: {
